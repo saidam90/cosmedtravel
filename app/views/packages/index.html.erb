@@ -1,6 +1,7 @@
+<h1>Our Packages</h1>
 
   <% @packages.each do |package| %>
-    <li><%= @package_name %></li>
-    <li><%= @package_description %></li>
-    <li><%= @package_price %></li>
+    <li><%= package.package_name %></li>
+    <li><%= package.package_description %></li>
+    <li><%= package.package_price %></li>
   <% end %>
