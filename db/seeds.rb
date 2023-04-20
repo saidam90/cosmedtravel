@@ -6,28 +6,29 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-Package.destroy_all
-puts "deleting packages"
+Package.delete_all
+puts "all packages deleted"
 ActiveRecord::Base.connection.execute('ALTER SEQUENCE packages_id_seq RESTART WITH 1')
-puts "id sequence restarted with 1"
+puts "reset the ID counter to 1"
 
-cosmetic_surgery = Package.create!(
+cosmetic_surgery = Package.create(
   package_name: "Cosmetic Surgery",
   package_description: "For many patients the Omega (mini) bypass is an effective option to the standard gastric bypass surgery. Thereby is the Omega (mini) bypass not far different from the Roux-en-Y gastric bypass method. A mini bypass in the Turkey will help you to reduce weight, because the intake of food will be restricted. Even the appetite will be controlled by a change in the enteric flora",
   package_price: 3750
 )
-puts "package cosmetic surgery created"
+puts "cosmetic surgery package created"
 
-weight_loss_surgery = Package.create!(
+weight_loss_surgery = Package.create(
   package_name: "Weight Loss Surgery",
   package_description: "For many patients the Omega (mini) bypass is an effective option to the standard gastric bypass surgery. Thereby is the Omega (mini) bypass not far different from the Roux-en-Y gastric bypass method. A mini bypass in the Turkey will help you to reduce weight, because the intake of food will be restricted. Even the appetite will be controlled by a change in the enteric flora",
   package_price: 4750
 )
-puts "package weight loss surgery created"
+puts "weight loss surgery package created"
 
-dental_treatment = Package.create!(
-  package_name: "Dental Treatment",
+
+dental_treatment = Package.create(
+  package_name: "Dental treatment",
   package_description: "For many patients the Omega (mini) bypass is an effective option to the standard gastric bypass surgery. Thereby is the Omega (mini) bypass not far different from the Roux-en-Y gastric bypass method. A mini bypass in the Turkey will help you to reduce weight, because the intake of food will be restricted. Even the appetite will be controlled by a change in the enteric flora",
   package_price: 5750
 )
-puts "package dental treatment created"
+puts "dental treatment package created"

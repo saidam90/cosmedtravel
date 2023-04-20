@@ -1,0 +1,13 @@
+<h1>Booking form</h1>
+
+<%= simple_form_for(@payment, :url => new_package_payment_path, :method => :post) do |f| %>
+
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :email %>
+  <%= f.input :phone %>
+  <%= f.input :address %>
+  <%= f.input :city %>
+  <%= f.input :country, as: :country %>
+  <%= f.submit "Submit the booking" %>
+<% end %>
