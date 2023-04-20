@@ -5,14 +5,14 @@ databases:
 
 services:
   - type: web
-    name: mysite
+    name: cosmedtravel
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: postgres://cosmedtraveluser:oMpzaC0TJVsduh1R3W4XI2ZkY4NsVYnR@dpg-cgv97ucs3fvmvqbnrch0-a/dbcosmedtravel
         fromDatabase:
-          name: mysite
+          name: cosmedtravel
           property: connectionString
       - key: f03ce6fb45892c4b812b59e5e341439e
         sync: false
