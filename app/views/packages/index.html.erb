@@ -1,6 +1,8 @@
-<h1>Our Packages</h1>
+<div class="container">
+  <h1>Our Packages</h1>
 
-  <% @packages.each do |package| %>
-    <li><%= package.package_name %></li>
-    <li><%= package.package_description %></li>
-  <% end %>
+    <% @packages.each do |package| %>
+      <li><%= package.package_name %></li>
+      <li><%= package.package_description %></li>
+    <% end %>
+</div>
