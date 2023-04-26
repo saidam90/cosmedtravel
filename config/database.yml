@@ -29,6 +29,10 @@ default: &default
 development:
   <<: *default
   database: cosmedtravel_development
+  username: cosmedtraveluser
+  password: <%= ENV["COSMEDTRAVEL_DB_PASSWORD"] %>
+  host: dpg-cgv97ucs3fvmvqbnrch0-a
+  port: 5432
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -63,6 +67,10 @@ development:
 test:
   <<: *default
   database: cosmedtravel_test
+  username: cosmedtraveluser
+  password: <%= ENV["COSMEDTRAVEL_DB_PASSWORD"] %>
+  host: dpg-cgv97ucs3fvmvqbnrch0-a
+  port: 5432
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -89,3 +97,5 @@ production:
   database: cosmedtravel_production
   username: cosmedtraveluser
   password: <%= ENV["COSMEDTRAVEL_DB_PASSWORD"] %>
+  host: dpg-cgv97ucs3fvmvqbnrch0-a
+  port: 5432
