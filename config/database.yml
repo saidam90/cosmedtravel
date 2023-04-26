@@ -18,10 +18,10 @@ default: &default
   adapter: postgresql
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: dpg-cgv97ucs3fvmvqbnrch0-a
+  host: localhost
   port: 5432
   database: dbcosmedtravel
-  username: cosmedtraveluser
+  username: Saida
   password: <%= ENV["PGPASSWORD"] %>
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
@@ -29,9 +29,9 @@ default: &default
 development:
   <<: *default
   database: cosmedtravel_development
-  username: cosmedtraveluser
+  username: Saida
   password: <%= ENV["PGPASSWORD"] %>
-  host: dpg-cgv97ucs3fvmvqbnrch0-a
+  host: localhost
   port: 5432
 
   # The specified database role being used to connect to postgres.
@@ -67,9 +67,9 @@ development:
 test:
   <<: *default
   database: cosmedtravel_test
-  username: cosmedtraveluser
+  username: Saida
   password: <%= ENV["PGPASSWORD"] %>
-  host: dpg-cgv97ucs3fvmvqbnrch0-a
+  host: localhost
   port: 5432
 
 # As with config/credentials.yml, you never want to store sensitive information,
@@ -95,7 +95,7 @@ test:
 production:
   <<: *default
   database: cosmedtravel_production
-  username: cosmedtraveluser
+  username: Saida
   password: <%= ENV["PGPASSWORD"] %>
-  host: dpg-cgv97ucs3fvmvqbnrch0-a
+  host: localhost
   port: 5432
