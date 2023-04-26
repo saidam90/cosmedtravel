@@ -18,8 +18,8 @@ default: &default
   adapter: postgresql
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: localhost
-  port: "5432"
+  host: dpg-cgv97ucs3fvmvqbnrch0-a
+  port: 5432
   database: dbcosmedtravel
   username: Saida
   password: <%= ENV["PGPASSWORD"] %>
@@ -31,8 +31,8 @@ development:
   database: cosmedtravel_development
   username: Saida
   password: <%= ENV["PGPASSWORD"] %>
-  host: localhost
-  port: "5432"
+  host: dpg-cgv97ucs3fvmvqbnrch0-a
+  port: 5432
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -69,8 +69,8 @@ test:
   database: cosmedtravel_test
   username: Saida
   password: <%= ENV["PGPASSWORD"] %>
-  host: localhost
-  port: "5432"
+  host: dpg-cgv97ucs3fvmvqbnrch0-a
+  port: 5432
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -97,5 +97,5 @@ production:
   database: cosmedtravel_production
   username: Saida
   password: <%= ENV["PGPASSWORD"] %>
-  host: localhost
-  port: "5432"
+  host: dpg-cgv97ucs3fvmvqbnrch0-a
+  port: 5432
