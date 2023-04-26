@@ -22,7 +22,7 @@ default: &default
   port: 5432
   database: dbcosmedtravel
   username: cosmedtraveluser
-  password: <%= ENV["COSMEDTRAVEL_DB_PASSWORD"] %>
+  password: <%= ENV["PGPASSWORD"] %>
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
 
@@ -30,7 +30,7 @@ development:
   <<: *default
   database: cosmedtravel_development
   username: cosmedtraveluser
-  password: <%= ENV["COSMEDTRAVEL_DB_PASSWORD"] %>
+  password: <%= ENV["PGPASSWORD"] %>
   host: dpg-cgv97ucs3fvmvqbnrch0-a
   port: 5432
 
@@ -68,7 +68,7 @@ test:
   <<: *default
   database: cosmedtravel_test
   username: cosmedtraveluser
-  password: <%= ENV["COSMEDTRAVEL_DB_PASSWORD"] %>
+  password: <%= ENV["PGPASSWORD"] %>
   host: dpg-cgv97ucs3fvmvqbnrch0-a
   port: 5432
 
@@ -96,6 +96,6 @@ production:
   <<: *default
   database: cosmedtravel_production
   username: cosmedtraveluser
-  password: <%= ENV["COSMEDTRAVEL_DB_PASSWORD"] %>
+  password: <%= ENV["PGPASSWORD"] %>
   host: dpg-cgv97ucs3fvmvqbnrch0-a
   port: 5432
