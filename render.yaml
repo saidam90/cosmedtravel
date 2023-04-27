@@ -10,9 +10,9 @@ services:
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
-      - key: <%= ENV["RENDER_API_KEY"] %>
+      - key: <%= ENV["INTERNAL_DATABASE_URL"] %>
         fromDatabase:
           name: cosmedtravel
           property: connectionString
-      - key: <%= ENV["DATABASE_URL"] %>
+      - key: <%= ENV["INTERNAL_DATABASE_URL"] %>
         sync: false
