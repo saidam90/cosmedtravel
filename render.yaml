@@ -10,9 +10,9 @@ services:
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
-      - key: postgres://cosmedtraveluser:oMpzaC0TJVsduh1R3W4XI2ZkY4NsVYnR@dpg-cgv97ucs3fvmvqbnrch0-a/dbcosmedtravel
+      - key: <%= ENV["RENDER_API_KEY"] %>
         fromDatabase:
           name: cosmedtravel
           property: connectionString
-      - key: postgres://cosmedtraveluser:oMpzaC0TJVsduh1R3W4XI2ZkY4NsVYnR@dpg-cgv97ucs3fvmvqbnrch0-a/dbcosmedtravel
+      - key: <%= ENV["DATABASE_URL"] %>
         sync: false
