@@ -1,18 +1,34 @@
-databases:
-  - name: cosmedtravel
-    databaseName: dbcosmedtravel
-    user: cosmedtraveluser
+defaults: &defaults
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  port: 5432
+  database: myapp_development
+  username: myapp_user
+  password: <%= ENV["PGPASSWORD"] %>
+  host: localhost
 
-services:
-  - type: web
-    name: cosmedtravel
-    env: ruby
-    buildCommand: "./bin/render-build.sh"
-    startCommand: "bundle exec puma -C config/puma.rb"
-    envVars:
-      - key: postgres://cosmedtraveluser:oMpzaC0TJVsduh1R3W4XI2ZkY4NsVYnR@dpg-cgv97ucs3fvmvqbnrch0-a/dbcosmedtravel
-        fromDatabase:
-          name: cosmedtravel
-          property: connectionString
-      - key: f03ce6fb45892c4b812b59e5e341439e
-        sync: false
+development:
+  <<: *defaults
+  database: cosmedtravel_development
+  username: Saida
+# databases:
+#   - name: postgresql
+#     databaseName: dbcosmedtravel
+#     user: cosmedtraveluser
+
+# services:
+#   - type: web
+#     name: cosmedtravel
+#     env: ruby
+#     # buildCommand: "./bin/render-build.sh"
+#     buildCommand: bundle install && rails db:migrate && rails assets:precompile
+#     # startCommand: "bundle exec puma -C config/puma.rb"
+#     startCommand: bundle exec puma -C config/puma.rb
+#     envVars:
+#       - key: postgres://cosmedtraveluser:oMpzaC0TJVsduh1R3W4XI2ZkY4NsVYnR@dpg-cgv97ucs3fvmvqbnrch0-a/dbcosmedtravel
+#         fromDatabase:
+#           name: cosmedtravel
+#           property: connectionString
+#       - key: f03ce6fb45892c4b812b59e5e341439e
+#         sync: false
