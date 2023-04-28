@@ -14,5 +14,5 @@ services:
         fromDatabase:
           name: cosmedtravel
           property: connectionString
-      - key: postgres://cosmedtraveluser:oMpzaC0TJVsduh1R3W4XI2ZkY4NsVYnR@dpg-cgv97ucs3fvmvqbnrch0-a/dbcosmedtravel
+      - key: DATABASE_URL
         sync: false
