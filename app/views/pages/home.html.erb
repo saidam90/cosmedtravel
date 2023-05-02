@@ -1,12 +1,55 @@
 <div class="container">
 
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= asset_path('5.png') %>);">
-    <div class="banner-text px-3 px-md-5">
-      <h1>Your trusted aesthetic travel agency in Azerbaijan</h1>
-      <p>Life is too short not to have the body you deserve. <br>
-      Cosmed Travel is a medical tourism agency, providing you with the best available treatment - in a safe, <br> supportive environment. Save time, money and stress - without compromising on the quality of your healthcare. <br>We can cater for most price points and ensure you get the best outcome.</p>
-      <%= link_to "Book your package", "/packages", class: "btn btn-primary" %>
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
+
+    <div class="carousel-inner">
+
+      <div class="carousel-item active" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= asset_path('5.png') %>);">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Your trusted aesthetic travel agency in Azerbaijan</h1>
+            <p>Life is too short not to have the body you deserve. <br> Cosmed Travel is a medical tourism agency, providing you with the best available treatment - in a safe, <br> supportive environment. Save time, money and stress - without compromising on the quality of your healthcare. <br>We can cater for most price points and ensure you get the best outcome.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= asset_path('7.png') %>);">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Another example headline.</h1>
+            <p>Some representative placeholder content for the second slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Book your package</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= asset_path('10.png') %>);">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>One more for good measure.</h1>
+            <p>Some representative placeholder content for the third slide of this carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 
   <div class="pricing pricing-header p-3 pb-md-4 mx-auto text-center">
