@@ -1,2 +1,37 @@
 @import "packages/home";
 @import "packages/show";
+
+h1 {
+  text-align: center;
+}
+
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-package > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-package h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-package p {
+  font-size: 12px;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.card-package .card-package-infos {
+  padding: 16px;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
