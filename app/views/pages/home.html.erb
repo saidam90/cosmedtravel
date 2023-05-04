@@ -56,23 +56,25 @@
   <section class="wrapper">
     <div class="container">
       <div class="row">
-        <div class="col text-center mb-3">
-          <h1 class="display-7 fw-normal text-uppercase mt-4">Choose Your Package</h1>
-            <p class="fs-6 text-muted mt-3">We offer a wide range of carefully curated packages that cater to different needs and goals. Whether you're looking for a complete makeover, a specific treatment, or a rejuvenating experience, our packages are designed to provide you with a comprehensive and personalized aesthetic travel experience. </p>
+        <div class="cards col text-center mb-3">
+          <h1 class="fw-normal text-uppercase mt-4">Selection of Treatments</h1>
+            <p class="fs-6 text-muted mt-4">We offer a wide range of carefully curated packages that cater to different needs and goals. Whether you're looking for a complete makeover, a specific treatment, or a rejuvenating experience, our packages are designed to provide you with a comprehensive and personalized aesthetic travel experience. </p>
         </div>
       </div>
 
       <div class="row">
 
-        <% @packages.each do |package| %>
+      <% treatments = ["face", "body", "hair"] %>
+
+        <%# <% @packages.each do |package| %>
+        <% treatments.each do |treatment| %>
           <div class="col-sm-12 col-md-6 col-lg-4 mt-4 mb-5 d-flex justify-content-center">
             <div class="card text-white card-has-bg click-col" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= asset_path('2.png') %>);">
             <img class="card-img d-none" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
               <div class="card-img-overlay d-flex flex-column">
                 <div class="card-body d-flex align-items-center">
-                  <ul class="my-3 fw-normal justify-content-center">
-                    <h1><%= package.package_name %></h1>
-                  </ul>
+                  <%# <h1><%= package.package_name </h1>%>
+                  <h1 class="mx-auto"> <%= treatment.upcase %></h1>
                 </div>
               </div>
             </div>

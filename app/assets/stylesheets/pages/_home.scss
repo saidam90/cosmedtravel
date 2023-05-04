@@ -51,6 +51,13 @@ body {
 }
 
 // CARDS
+
+.cards {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+
 .card {
   border: none;
   transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
@@ -97,12 +104,10 @@ body {
 
       .card-img-overlay {
         transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-        // background: rgb(35, 79, 109);
-        // background: linear-gradient(
-        //   0deg,
-        //   // rgba(4, 69, 114, 0.5) 0%,
-        //   // rgba(4, 69, 114, 1) 100%
-        // );
+      }
+
+      &:before {
+        filter: none;
       }
     }
   }
