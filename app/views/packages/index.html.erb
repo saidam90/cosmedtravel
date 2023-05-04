@@ -1,10 +1,10 @@
 <div class="container">
-  <h1>Our Packages</h1>
+  <h1 class="mb-5 d-flex justify-content-center">Our Packages</h1>
 
    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
      <% @packages.each do |package| %>
-      <div class="col">
-        <div class="card-package">
+      <div class="col d-flex justify-content-center">
+        <div class="card-package mb-5">
           <%= image_tag "3.png" %>
           <div class="card-package-infos">
             <h2 class="my-3 fw-normal"><%= package.package_name %></h2>
