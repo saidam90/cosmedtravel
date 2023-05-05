@@ -1,0 +1,23 @@
+.form-control {
+  border-radius: 10px;
+}
+
+.fas {
+  color: rgb(104, 104, 104);
+}
+
+.row {
+  .btn {
+    color: white;
+    padding: 12px 24px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: 200;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: rgb(51, 75, 145);
+  }
+}
