@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   resources :hair_treatments, only: [:index, :show] do
     resources :treatments, only: [:index, :new, :create]
   end
+
   # Defines the root path route ("/")
   # root "articles#index"
 end
