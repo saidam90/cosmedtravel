@@ -1,6 +1,6 @@
 class HairTreatmentsController < ApplicationController
   def index
-    @hair_treatments = HairTreatments.all
+    @hair_treatments = HairTreatment.all
   end
 
   def show

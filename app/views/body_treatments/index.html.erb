@@ -1,0 +1,19 @@
+<div class="container">
+  <h1 class="mb-5 d-flex justify-content-center">Body Treatments</h1>
+
+   <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+     <% @body_treatments.each do |body_treatment| %>
+      <div class="col d-flex justify-content-center">
+        <div class="card-package mb-5">
+          <%= image_tag "3.png" %>
+          <div class="card-package-infos">
+            <h2 class="my-3 fw-normal"><%= body_treatment.body_treatment_name %></h2>
+            <p><%= body_treatment.body_treatment_description %></p>
+            <%= link_to "Read more", "", class: "mt-6" %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+  </div>
+
+</div>

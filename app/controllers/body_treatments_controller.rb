@@ -1,6 +1,6 @@
 class BodyTreatmentsController < ApplicationController
   def index
-    @body_treatments = BodyTreatments.all
+    @body_treatments = BodyTreatment.all
   end
 
   def show

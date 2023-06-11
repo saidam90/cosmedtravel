@@ -1,6 +1,6 @@
 class FaceTreatmentsController < ApplicationController
   def index
-    @face_treatments = FaceTreatments.all
+    @face_treatments = FaceTreatment.all
   end
 
   def show
