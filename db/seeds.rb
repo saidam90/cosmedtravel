@@ -11,24 +11,62 @@ puts "all packages deleted"
 ActiveRecord::Base.connection.execute('ALTER SEQUENCE packages_id_seq RESTART WITH 1')
 puts "reset the ID counter to 1"
 
+puts "creating packages"
 cosmetic_surgery = Package.create(
   package_name: "Cosmetic Surgery",
-  package_description: "For many patients the Omega (mini) bypass is an effective option to the standard gastric bypass surgery. Thereby is the Omega (mini) bypass not far different from the Roux-en-Y gastric bypass method. A mini bypass in the Turkey will help you to reduce weight, because the intake of food will be restricted. Even the appetite will be controlled by a change in the enteric flora",
+  package_description: "For many patients the Omega (mini) bypass is an effective option to the standard gastric bypass surgery. Thereby is the Omega (mini) bypass not far different from the Roux-en-Y gastric bypass method. A mini bypass in Azerbaijan will help you to reduce weight, because the intake of food will be restricted. Even the appetite will be controlled by a change in the enteric flora",
   package_price: 3750
 )
-puts "cosmetic surgery package created"
 
 weight_loss_surgery = Package.create(
   package_name: "Weight Loss Surgery",
-  package_description: "For many patients the Omega (mini) bypass is an effective option to the standard gastric bypass surgery. Thereby is the Omega (mini) bypass not far different from the Roux-en-Y gastric bypass method. A mini bypass in the Turkey will help you to reduce weight, because the intake of food will be restricted. Even the appetite will be controlled by a change in the enteric flora",
+  package_description: "For many patients the Omega (mini) bypass is an effective option to the standard gastric bypass surgery. Thereby is the Omega (mini) bypass not far different from the Roux-en-Y gastric bypass method. A mini bypass in Azerbaijan will help you to reduce weight, because the intake of food will be restricted. Even the appetite will be controlled by a change in the enteric flora",
   package_price: 4750
 )
-puts "weight loss surgery package created"
 
 
 dental_treatment = Package.create(
   package_name: "Dental treatment",
-  package_description: "For many patients the Omega (mini) bypass is an effective option to the standard gastric bypass surgery. Thereby is the Omega (mini) bypass not far different from the Roux-en-Y gastric bypass method. A mini bypass in the Turkey will help you to reduce weight, because the intake of food will be restricted. Even the appetite will be controlled by a change in the enteric flora",
+  package_description: "For many patients the Omega (mini) bypass is an effective option to the standard gastric bypass surgery. Thereby is the Omega (mini) bypass not far different from the Roux-en-Y gastric bypass method. A mini bypass in Azerbaijan will help you to reduce weight, because the intake of food will be restricted. Even the appetite will be controlled by a change in the enteric flora",
   package_price: 5750
 )
-puts "dental treatment package created"
+puts "packages created"
+
+puts "creating face treatments"
+
+facelift = FaceTreatment.find_or_create_by(
+  face_treatment_name: "Facelift",
+  face_treatment_description: "At Cosmed Travel, we provide facelift procedures performed by highly skilled surgeons in state-of-the-art, internationally accredited facilities. Experience a remarkable transformation at a price within reach. Enhance your appearance without compromising your overall health and well-being. Make the wise choice and opt for Cosmed Travel."
+)
+
+rhinoplasty = FaceTreatment.find_or_create_by(
+  face_treatment_name: "Rhinoplasty",
+  face_treatment_description: "At Cosmed Travel, we excel in delivering top-tier rhinoplasty procedures, both surgical and non-surgical, at competitive rates. Benefit from substantial savings of 30% to 50% on your rhinoplasty while ensuring uncompromised quality of care and personal wellness. Request a complimentary quote today without any obligations."
+)
+
+neck_lift = FaceTreatment.find_or_create_by(
+  face_treatment_name: "Neck Lift",
+  face_treatment_description: "Are you eager to eliminate the appearance of a 'turkey neck' and achieve a smoother, more elegant neck? Look no further than a neck lift. Our team of exceptional cosmetic surgeons boasts impressive expertise, extensive experience, and a proven history of satisfying clients worldwide. Join the ranks of thousands who have benefited from our world-class services."
+)
+
+face_and_neck_lift = FaceTreatment.find_or_create_by(
+  face_treatment_name: "Face & Neck Lift",
+  face_treatment_description: "At Cosmed Travel, we offer a cost-effective package that combines a face and neck lift, allowing you to enhance your appearance seamlessly. Rest assured, our team of world-class surgeons and top-notch 5* medical facilities will work together to achieve the desired outcome you seek. And the best part? You can save between 30% to 50% on your face and neck lift."
+)
+
+blepharoplasty = FaceTreatment.find_or_create_by(
+  face_treatment_name: "Blepharoplasty",
+  face_treatment_description: "Cosmed Travel presents a unique opportunity for a luxurious and affordable holiday experience combined with blepharoplasty (eyelid surgery) procedures in Azerbaijan. Our dedicated team of licensed, highly skilled, and extensively experienced surgeons will provide you with exceptional care in modern hospitals. Following your surgery, enjoy a serene recovery in 5-star accommodation, ensuring a relaxing and rejuvenating experience."
+)
+
+dermal_fillers = FaceTreatment.find_or_create_by(
+  face_treatment_name: "Dermal Fillers",
+  face_treatment_description: "At Cosmed Travel, our team of cosmetic experts offers dermal fillers at highly affordable rates. Experience a transformative and refreshed look at our medical facilities, all while saving a significant amount compared to prices in Europe or US. Your desired aesthetic can be achieved without breaking the bank at Cosmed Travel."
+)
+
+anti_wrinkle_injections = FaceTreatment.find_or_create_by(
+  face_treatment_name: "Anti Wrinkle Injections",
+  face_treatment_description: "At Cosmed Travel, our cosmetic team comprises highly skilled and experienced professionals who specialize in administering anti-wrinkle injections. With our expertise, we can help you attain a natural and more youthful appearance, boosting your self-confidence in the process. Trust us to assist you in enhancing your overall appearance and achieving the desired results."
+)
+
+puts "face treatments created"

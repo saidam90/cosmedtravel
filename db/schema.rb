@@ -15,22 +15,22 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_11_135002) do
   enable_extension "plpgsql"
 
   create_table "body_treatments", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
+    t.string "body_treatment_name"
+    t.text "body_treatment_description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "face_treatments", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
+    t.string "face_treatment_name"
+    t.text "face_treatment_description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "hair_treatments", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
+    t.string "hair_treatment_name"
+    t.text "hair_treatment_description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
