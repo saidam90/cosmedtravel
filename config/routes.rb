@@ -10,15 +10,15 @@ Rails.application.routes.draw do
   end
 
   resources :face_treatments, only: [:index, :show] do
-    resources :treatments
+    resources :treatments, only: [:index, :new, :create]
   end
 
   resources :body_treatments, only: [:index, :show] do
-    resources :treatments
+    resources :treatments, only: [:index, :new, :create]
   end
 
   resources :hair_treatments, only: [:index, :show] do
-    resources :treatments
+    resources :treatments, only: [:index, :new, :create]
   end
   # Defines the root path route ("/")
   # root "articles#index"

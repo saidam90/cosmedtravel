@@ -70,3 +70,22 @@ anti_wrinkle_injections = FaceTreatment.find_or_create_by(
 )
 
 puts "face treatments created"
+
+puts "creating hair treatments"
+
+hair_transplants = HairTreatment.find_or_create_by(
+  hair_treatment_name: "Hair Transplants",
+  hair_treatment_description: "At Cosmed Travel, we specialize in delivering exceptional hair transplants at affordable prices. Our dedicated team at Cosmed Travel has personal experience undergoing hair transplants in Azerbaijan, ensuring that you are in safe and experienced hands. Rest easy knowing that our knowledgeable team will provide you with the highest level of care and expertise throughout your hair transplant journey."
+)
+
+beard_transplant = HairTreatment.find_or_create_by(
+  hair_treatment_name: "Beard Transplant",
+  hair_treatment_description: "In today's fashion-forward world, beards have become increasingly popular. However, their appeal extends beyond mere trendiness. Beards are often regarded as symbols of masculinity, courage, and trustworthiness. If you desire a fuller and thicker beard, consider opting for a beard transplant. By choosing Cosmed Travel, you can achieve your desired facial hair while enjoying savings of up to 50% on the procedure. Embrace the opportunity to enhance your appearance and embrace the qualities associated with a well-grown beard by selecting Cosmed Travel."
+)
+
+eyebrow_transplant = HairTreatment.find_or_create_by(
+  hair_treatment_name: "Eyebrow Transplant",
+  hair_treatment_description: "Full and lush eyebrows are not only a trendy fashion statement but also contribute to a more natural and youthful appearance. At Cosmed Travel, we prioritize offering the finest eyebrow transplants in Azerbaijan, facilitated by our world-class surgeons and internationally accredited clinic. However, if you prefer to explore other destinations, we also provide eyebrow transplant procedures at select international clinics within our network. Our commitment is to ensure the highest quality and satisfaction, regardless of the location you choose for your eyebrow transplant."
+)
+
+puts "hair treatments created"
