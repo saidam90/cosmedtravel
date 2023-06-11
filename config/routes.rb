@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   resources :packages, only: [:index, :show] do
     resources :payments, only: [:new, :create]
   end
+
+  resources :treatments do
+    resources :face_treatments, only: [:new, :create]
+  end
   # Defines the root path route ("/")
   # root "articles#index"
 end

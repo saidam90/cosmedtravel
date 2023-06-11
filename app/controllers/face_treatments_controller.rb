@@ -1,0 +1,2 @@
+class FaceTreatmentsController < ApplicationController
+end

@@ -10,9 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_18_135254) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_11_135002) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "body_treatments", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "face_treatments", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "hair_treatments", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "packages", force: :cascade do |t|
     t.string "package_name"
@@ -38,5 +59,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_18_135254) do
     t.index ["package_id"], name: "index_payments_on_package_id"
   end
 
+  create_table "treatments", force: :cascade do |t|
+    t.bigint "face_treatment_id"
+    t.bigint "body_treatment_id"
+    t.bigint "hair_treatment_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["body_treatment_id"], name: "index_treatments_on_body_treatment_id"
+    t.index ["face_treatment_id"], name: "index_treatments_on_face_treatment_id"
+    t.index ["hair_treatment_id"], name: "index_treatments_on_hair_treatment_id"
+  end
+
   add_foreign_key "payments", "packages"
+  add_foreign_key "treatments", "body_treatments"
+  add_foreign_key "treatments", "face_treatments"
+  add_foreign_key "treatments", "hair_treatments"
 end
