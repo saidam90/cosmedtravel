@@ -5,7 +5,7 @@ class FaceTreatmentsController < ApplicationController
 
   def show
     @face_treatment = FaceTreatment.find(params[:id])
-    @face_treatment = FcaeTreatment.new
+    @face_treatment = FaceTreatment.new
   end
 
   private
