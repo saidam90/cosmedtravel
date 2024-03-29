@@ -8,8 +8,8 @@
           <%= image_tag package.image %>
           <div class="card-package-infos">
             <h2 class="my-3 fw-normal"><%= package.package_name %></h2>
-            <p><%= package.package_description %></p>
-            <%= link_to "Read more", package_path(package), class: "mt-6" %>
+            <p class="mb-2"><%= package.package_description %></p>
+            <%= link_to "Read more", package_path(package) %>
           </div>
         </div>
       </div>
