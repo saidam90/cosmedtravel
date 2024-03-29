@@ -1,7 +1,15 @@
 <div class="container">
-  <h2><%= @package.package_name %></h2>
-  <p><%= @package.package_description %></p>
-  <p><%= @package.package_price %></p>
-
-  <button>Book now</button>
+  <div class="row justify-content-center">
+    <div class="col-md-10 text-center">
+      <%= image_tag @package.image, class: "img-fluid" %>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <h2 class="mt-4"><%= @package.package_name %></h2>
+      <p><%= @package.package_description %></p>
+      <p>Price: <%= @package.package_price %></p>
+      <p><a class="btn btn-lg btn-primary mb-4" href="#">Book now</a></p>
+    </div>
+  </div>
 </div>

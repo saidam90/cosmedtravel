@@ -15,20 +15,23 @@ puts "creating packages"
 cosmetic_surgery = Package.create(
   package_name: "Cosmetic Surgery",
   package_description: "For many patients the Omega (mini) bypass is an effective option to the standard gastric bypass surgery. Thereby is the Omega (mini) bypass not far different from the Roux-en-Y gastric bypass method. A mini bypass in Azerbaijan will help you to reduce weight, because the intake of food will be restricted. Even the appetite will be controlled by a change in the enteric flora",
-  package_price: 3750
+  package_price: "3750 AZN",
+  image: "5.png"
 )
 
 weight_loss_surgery = Package.create(
   package_name: "Weight Loss Surgery",
   package_description: "For many patients the Omega (mini) bypass is an effective option to the standard gastric bypass surgery. Thereby is the Omega (mini) bypass not far different from the Roux-en-Y gastric bypass method. A mini bypass in Azerbaijan will help you to reduce weight, because the intake of food will be restricted. Even the appetite will be controlled by a change in the enteric flora",
-  package_price: 4750
+  package_price: 4750,
+  image: "3.png"
 )
 
 
 dental_treatment = Package.create(
   package_name: "Dental treatment",
   package_description: "For many patients the Omega (mini) bypass is an effective option to the standard gastric bypass surgery. Thereby is the Omega (mini) bypass not far different from the Roux-en-Y gastric bypass method. A mini bypass in Azerbaijan will help you to reduce weight, because the intake of food will be restricted. Even the appetite will be controlled by a change in the enteric flora",
-  package_price: 5750
+  package_price: 5750,
+  image: "9.png"
 )
 puts "packages created"
 
